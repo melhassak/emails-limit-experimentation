@@ -19,6 +19,9 @@ public class EMEX_EmailService {
         email.setTargetObjectId(objectId);
         email.setSubject(subject);
         email.setPlainTextBody(body);
+	    
+	String myIdPrefix = String.valueOf(objectId).substring(0,3);
+        if(myIdPrefix == '005') email.setSaveAsActivity(false);
 
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { email });
         
