@@ -27,7 +27,7 @@ public class EMEX_EmailService {
         
     }
 	
-    public static void sendMassEMailUsingTargetObjectId(List<ID> objectIds){
+    public static void sendMassEMailUsingTargetObjectId(List<ID> objectIds, Boolean bccSender){
     
 	Messaging.MassEmailMessage email = new Messaging.MassEmailMessage();
 
@@ -38,6 +38,7 @@ public class EMEX_EmailService {
 
 	email.setTargetObjectIds(objectIds);
 	email.setTemplateID(template.Id);
+    email.setBccSender(bccSender);
 
 	Messaging.sendEmail(new Messaging.MassEmailMessage[] { email });
     }
