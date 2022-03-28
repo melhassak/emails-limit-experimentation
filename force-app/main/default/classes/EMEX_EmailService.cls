@@ -26,5 +26,20 @@ public class EMEX_EmailService {
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { email });
         
     }
+	
+    public static void sendMassEMailUsingTargetObjectId(List<ID> objectIds){
+    
+	Messaging.MassEmailMessage email = new Messaging.MassEmailMessage();
+
+	EmailTemplate template =  [SELECT Id 
+				   FROM EmailTemplate 
+				   WHERE DeveloperName = 'EMEX_Email_Template_For_Contact'
+				   LIMIT 1];
+
+	email.setTargetObjectIds(objectIds);
+	email.setTemplateID(template.Id);
+
+	Messaging.sendEmail(new Messaging.MassEmailMessage[] { email });
+    }
 
 }
