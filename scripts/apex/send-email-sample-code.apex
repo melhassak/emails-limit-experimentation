@@ -22,3 +22,12 @@ EMEX_EmailService.sendSingleEMailUsingTargetObjectId(
     body    
 );
 /*****************************************************************/
+
+/***************** Send Mass Email Using Target Object Id ********/
+List<ID> objectIds = new List<ID>();
+
+objectIds.add('0038d0000068pj2AAA');
+objectIds.add('0038d0000068plNAAQ');
+
+EMEX_EmailService.sendMassEMailUsingTargetObjectId(objectIds);
+/*****************************************************************/
