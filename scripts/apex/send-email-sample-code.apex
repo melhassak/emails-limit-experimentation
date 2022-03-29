@@ -29,5 +29,5 @@ List<ID> objectIds = new List<ID>();
 objectIds.add('0038d0000068pj2AAA');
 objectIds.add('0038d0000068plNAAQ');
 
-EMEX_EmailService.sendMassEMailUsingTargetObjectId(objectIds);
+EMEX_EmailService.sendMassEMailUsingTargetObjectId(objectIds,false);
 /*****************************************************************/
