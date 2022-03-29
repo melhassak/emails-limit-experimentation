@@ -40,6 +40,9 @@ public class EMEX_EmailService {
 	email.setTemplateID(template.Id);
     email.setBccSender(bccSender);
 
+    String myIdPrefix = String.valueOf(objectIds[0]).substring(0,3);
+        if(myIdPrefix == '005') email.setSaveAsActivity(false);
+
 	Messaging.sendEmail(new Messaging.MassEmailMessage[] { email });
     }
 
