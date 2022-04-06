@@ -9,11 +9,6 @@
         <members>unfiled$public/EMEX_Email_Template_For_User</members>
         <name>EmailTemplate</name>
     </types>
-        <types>
-        <members>unfiled$public/EMEX_Email_Template_For_Contact</members>
-        <members>unfiled$public/EMEX_Email_Template_For_User</members>
-        <name>EmailTemplate</name>
-    </types>
     <types>
         <members>EMEX_Home_Page</members>
         <name>FlexiPage</name>
